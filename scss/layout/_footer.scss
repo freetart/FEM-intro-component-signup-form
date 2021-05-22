@@ -1,0 +1,34 @@
+// imports
+@use '../abstracts/base';
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+// footer
+.footer {
+  @include mix.flexCenter;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: var.color(black);
+
+  h3 {
+    @include mix.textStyles;
+    font-size: var.size(xxs);
+    color: var.color(white);
+  }
+
+  a {
+    @include mix.headingStyles;
+    color: var.color(red);
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    width: 5rem;
+  }
+}
