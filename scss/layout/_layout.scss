@@ -2,3 +2,106 @@
 @use '../abstracts/base';
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
+
+.signup {
+  background: url("../images/bg-intro-desktop.png") center center/cover
+    no-repeat var.color(red);
+  height: 100vh;
+
+  @include mix.responsive(lg) {
+    height: auto;
+  }
+
+  &__content {
+    @include mix.maxWidthLg;
+    @include mix.sectionSpacing;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+    height: 100vh;
+
+    @include mix.responsive(lg) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+  }
+
+  &-info {
+    color: var.color(white);
+
+    @include mix.responsive(md) {
+      text-align: center;
+    }
+
+    &__heading {
+      @include mix.headingStyles;
+      font-size: var.size(xxl) + 2rem;
+      padding-bottom: 1rem;
+
+      @include mix.responsive(md) {
+        font-size: var.size(xxl);
+      }
+    }
+
+    &__lead {
+      @include mix.textStyles;
+      font-size: var.size(xs);
+
+      @include mix.responsive(md) {
+        font-size: var.size(xs) - 0.1rem;
+      }
+    }
+  }
+
+  &-form {
+    &__banner {
+      background-color: var.color(blue);
+      border-radius: var.$radiusLg;
+      padding: var.$formInputBtnPadding;
+      box-shadow: var.$bannerShadow;
+      text-align: center;
+      margin-bottom: 3rem;
+
+      .signup-form__text {
+        @include mix.textStyles;
+        color: var.color(white);
+        font-size: var.size(xxs) + 0.1rem;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__inputs {
+      background-color: var.color(white);
+      border-radius: var.$radiusLg;
+      box-shadow: var.$formShadow;
+      padding: 3rem;
+
+      @include mix.responsive(md) {
+        padding: 1.5rem;
+      }
+
+      .signup-form__disclaimer {
+        @include mix.flexCenter;
+        flex-wrap: wrap;
+        text-align: center;
+        color: var.color(grayishBlue);
+        font-size: var.size(xxs) - 0.1rem;
+
+        .signup-form__link {
+          color: var.color(red);
+          margin-left: 0.5rem;
+          outline: 0;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
