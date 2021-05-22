@@ -11,13 +11,13 @@
   padding: 2rem 2rem 1rem 2rem;
   background-color: var.color(black);
 
-  h3 {
+  &__heading {
     @include mix.textStyles;
     font-size: var.size(xxs);
     color: var.color(white);
   }
 
-  a {
+  &__link {
     @include mix.headingStyles;
     color: var.color(red);
     outline: 0;
@@ -28,7 +28,7 @@
     }
   }
 
-  img {
+  &__logo {
     width: 5rem;
   }
 }
