@@ -8,6 +8,78 @@
     <title>Frontend Mentor Intro Component with Sign-up Form</title>
   </head>
   <body>
+    <!-- signup -->
+    <section class="signup">
+      <div class="signup__content">
+        <div class="signup__info">
+          <h1 class="signup__heading">Learn to code by watching others</h1>
+          <p class="signup__lead">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="signup__form">
+          <div class="signup__banner">
+            <h4 class="signup__text">
+              <span>Try it free 7 days</span> then $20/mo. thereafter
+            </h4>
+          </div>
+          <form class="signup__inputs">
+            <!-- single input group -->
+            <div class="input-group">
+              <label for="firstname"></label>
+              <input
+                type="text"
+                placeholder="First Name"
+                name="firstname"
+                class="input-group__input"
+              />
+            </div>
+            <!-- single input group -->
+            <div class="input-group">
+              <label for="lastname"></label>
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="lastname"
+                class="input-group__input"
+              />
+            </div>
+            <!-- single input group -->
+            <div class="input-group">
+              <label for="email"></label>
+              <input
+                type="email"
+                placeholder="Email Address"
+                name="email"
+                class="input-group__input"
+              />
+            </div>
+            <!-- single input group -->
+            <div class="input-group">
+              <label for="password"></label>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                class="input-group__input"
+              />
+            </div>
+            <!-- single input group -->
+            <div class="input-group">
+              <button type="submit" class="btn btn--primary">
+                Claim your free trial
+              </button>
+            </div>
+            <small class="signup__disclaimer">
+              By clicking the button, you are agreeing to our
+              <a href="#!" class="signup__link"> Terms and Services </a>
+            </small>
+          </form>
+        </div>
+      </div>
+    </section>
     <script src="./js/main.js"></script>
   </body>
 </html>
