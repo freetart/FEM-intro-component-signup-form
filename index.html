@@ -11,6 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Frontend Mentor Intro Component with Sign-up Form</title>
@@ -29,7 +31,7 @@
     <!-- signup -->
     <section class="signup">
       <div class="signup__content">
-        <div class="signup-info">
+        <div class="signup-info" data-aos="fade-right">
           <h1 class="signup-info__heading">Learn to code by watching others</h1>
           <p class="signup-info__lead">
             See how experienced developers solve problems in real-time. Watching
@@ -37,7 +39,7 @@
             is invaluable.
           </p>
         </div>
-        <div class="signup-form">
+        <div class="signup-form" data-aos="fade-left">
           <div class="signup-form__banner">
             <h4 class="signup-form__text">
               <span>Try it free 7 days</span> then $20/mo. thereafter
@@ -110,6 +112,12 @@
         </div>
       </div>
     </section>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 200, duration: 1000, once: true });
+    </script>
+    <!-- js -->
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
