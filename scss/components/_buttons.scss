@@ -1,0 +1,27 @@
+// imports
+@use '../abstracts/base';
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+// buttons
+.btn {
+  @include mix.textStyles;
+  padding: var.$formInputBtnPadding;
+  font-size: var.size(xs);
+  border-radius: var.$radiusSm;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.btn--primary {
+  background-color: var.color(green);
+  color: var.color(white);
+  transition: var.$mainTransition;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(var.color(green), 5%);
+  }
+}

@@ -1,0 +1,25 @@
+// imports
+@use '../abstracts/base';
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+// inputs
+.input-group {
+  margin: 2rem 0;
+
+  &__input {
+    @include mix.textStyles;
+    padding: var.$formInputBtnPadding;
+    border-radius: var.$radiusSm;
+    font-size: var.size(xs);
+    width: 100%;
+    border: 0.1rem solid var.color(grayishBlue);
+    outline: 0;
+    transition: var.$mainTransition;
+
+    &:hover,
+    &:focus {
+      border: 0.1rem solid var.color(blue);
+    }
+  }
+}
