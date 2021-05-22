@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Frontend Mentor Intro Component with Sign-up Form</title>
@@ -34,7 +42,10 @@
                 placeholder="First Name"
                 name="firstname"
                 class="input-group__input"
+                id="firstName"
               />
+              <i class="fas fa-exclamation-circle input-group__icon"></i>
+              <small class="input-group__message">Hello</small>
             </div>
             <!-- single input group -->
             <div class="input-group">
@@ -44,17 +55,23 @@
                 placeholder="Last Name"
                 name="lastname"
                 class="input-group__input"
+                id="lastName"
               />
+              <i class="fas fa-exclamation-circle input-group__icon"></i>
+              <small class="input-group__message">Hello</small>
             </div>
             <!-- single input group -->
             <div class="input-group">
               <label for="email"></label>
               <input
-                type="email"
+                type="text"
                 placeholder="Email Address"
                 name="email"
                 class="input-group__input"
+                id="email"
               />
+              <i class="fas fa-exclamation-circle input-group__icon"></i>
+              <small class="input-group__message">Hello</small>
             </div>
             <!-- single input group -->
             <div class="input-group">
@@ -64,7 +81,10 @@
                 placeholder="Password"
                 name="password"
                 class="input-group__input"
+                id="password"
               />
+              <i class="fas fa-exclamation-circle input-group__icon"></i>
+              <small class="input-group__message">Hello</small>
             </div>
             <!-- submit -->
             <div class="input-group">

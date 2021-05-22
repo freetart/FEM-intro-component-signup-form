@@ -6,6 +6,7 @@
 // inputs
 .input-group {
   margin: 2rem 0;
+  position: relative;
 
   &__input {
     @include mix.textStyles;
@@ -20,6 +21,43 @@
     &:hover,
     &:focus {
       border: 0.1rem solid var.color(blue);
+    }
+  }
+
+  &__icon {
+    color: var.color(red);
+    font-size: var.size(lg);
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    display: none;
+
+    // &.error {
+    //   display: block;
+    // }
+  }
+
+  &__message {
+    @include mix.textStyles;
+    font-size: var.size(xxs);
+    color: var.color(red);
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0.5rem 0.5rem 0 0;
+    display: none;
+  }
+
+  &.error {
+    .input-group__input {
+      border: 0.1rem solid var.color(red);
+    }
+
+    .input-group__message {
+      display: flex;
+    }
+
+    .input-group__icon {
+      display: block;
     }
   }
 }

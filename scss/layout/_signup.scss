@@ -6,7 +6,7 @@
 .signup {
   background: url("../images/bg-intro-desktop.png") center center/cover
     no-repeat var.color(red);
-  height: 100vh;
+  min-height: 100vh;
 
   @include mix.responsive(lg) {
     height: auto;
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 
     @include mix.responsive(lg) {
       grid-template-columns: 1fr;
